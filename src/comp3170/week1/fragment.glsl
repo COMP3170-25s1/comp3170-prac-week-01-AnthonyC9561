@@ -9,10 +9,10 @@ void main() {
 	bool widthLarger = true; //whether width is larger or not
 
 	if(u_screenSize[0] > u_screenSize[1]) { //if statements for uniform at later points in the code results in error of unable to locate uniform variable, flag used to determine which window dimension is bigger
-		larger = true;
+		widthLarger = true;
 	}
 	else {
-		larger = false;
+		widthLarger = false;
 	}
 	
 	float maxSize = max(u_screenSize[0], u_screenSize[1]);
@@ -36,7 +36,7 @@ void main() {
     if (d < 0.25 ) {
     	o_colour = vec4(u_colour, 1);
     }
-   else {
-      o_colour = vec4(0,0,0,1); // BLACK
-   }
+    else {
+        o_colour = vec4(0,0,0,1); // BLACK
+    }
 }
